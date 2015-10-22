@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Shows</id>
+    <version>1.0.0-beta1</version>
+    <authors>Daniel Kerridge</authors>
+    <description>Self Hosted Opinionated Web Server</description>
+    <language>en-US</language>
+    <projectUrl>http://github.com/edjo23/shows</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes></releaseNotes>
+    <dependencies>
+		<dependency id="SimpleInjector" version="[3.1.0]" />
+		<dependency id="NLog" version="[4.1.0]" />
+		<dependency id="SimpleInjector.Integration.WebApi" version="[3.1.0]" />
+		<dependency id="Common.Logging" version="[3.3.0]" />
+		<dependency id="Common.Logging.NLog41" version="[3.3.0]" />
+		<dependency id="Microsoft.Owin.Hosting" version="[3.0.1]" />		
+		<dependency id="Microsoft.Owin.Host.HttpListener" version="[3.0.1]" />		
+		<dependency id="Microsoft.AspNet.WebApi.OwinSelfHost" version="[5.2.3]" />
+		<dependency id="Microsoft.Owin.StaticFiles" version="[3.0.1]" />		
+    </dependencies>
+  </metadata>
+
+  <files>
+    <file src="..\bin\Release\Shows.dll" target="lib" />
+  </files>
+</package>
