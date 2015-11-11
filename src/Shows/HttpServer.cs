@@ -77,7 +77,7 @@ namespace Shows
                 FileSystem = new PhysicalFileSystem(@".\StaticRoot")
             };
             packageFileServiceOptions.StaticFileOptions.ServeUnknownFileTypes = true;
-            packageFileServiceOptions.DefaultFilesOptions.DefaultFileNames.Add("index.html");
+            packageFileServiceOptions.DefaultFilesOptions.DefaultFileNames.Add("home.html");
 
             app.UseFileServer(packageFileServiceOptions);            
         }

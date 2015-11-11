@@ -1,6 +1,7 @@
-﻿using System.Web.Http;
+using System.Web.Http;
+using Shows;
 
-namespace Shows.Example.Controllers
+namespace $rootnamespace$.Controllers
 {
     [LogAction]
     public class HomeController : ApiController

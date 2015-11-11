@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <configSections xdt:Transform="InsertBefore(/configuration/*)" xdt:Locator="Condition(count(/configuration/configSections)=0)" />
+  <configSections>
+    <sectionGroup name="common" xdt:Transform="InsertIfMissing" xdt:Locator="Match(name)">
+      <section name="logging" type="Common.Logging.ConfigurationSectionHandler, Common.Logging" xdt:Transform="InsertIfMissing" xdt:Locator="Match(name)" />
+    </sectionGroup>
+    <section name="nlog" type="NLog.Config.ConfigSectionHandler, NLog" xdt:Transform="InsertIfMissing" xdt:Locator="Match(name)" />
+  </configSections>
+  <common xdt:Transform="InsertIfMissing">
+    <logging xdt:Transform="InsertIfMissing">
+      <factoryAdapter type="Common.Logging.NLog.NLogLoggerFactoryAdapter, Common.Logging.NLog41" xdt:Transform="InsertIfMissing">
+        <arg key="configType" value="INLINE" />
+      </factoryAdapter>
+    </logging>
+  </common>
+  <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xdt:Transform="InsertIfMissing">
+    <targets>
+      <target name="file" xsi:type="File" layout="${longdate} ${level} - ${message} ${exception:format=tostring}" fileName="Log.txt" archiveAboveSize="50000" maxArchiveFiles="1" />
+    </targets>
+    <rules>
+      <logger name="*" minlevel="Debug" writeTo="file" />
+    </rules>
+  </nlog>
+</configuration>

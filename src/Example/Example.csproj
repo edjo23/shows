@@ -126,7 +126,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="StaticRoot\index.html">
+    <Content Include="StaticRoot\Home.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="StaticRoot\Home.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="StaticRoot\Site.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Shows.Start</id>
+    <version>1.0.0-beta1</version>
+    <authors>Daniel Kerridge</authors>
+    <description>Self Hosted Opinionated Web Server</description>
+    <language>en-US</language>
+    <projectUrl>http://github.com/edjo23/shows</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes></releaseNotes>
+    <dependencies>
+		  <dependency id="Shows" version="[1.0.0-beta1]" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\src\Example\StaticRoot\*" target="content\StaticRoot" />
+    <file src="*Controller.cs.pp" target="content\Controllers" />
+    <!--<file src="app.config.install.xdt" target="content" />-->
+  </files>
+</package>

@@ -13,6 +13,7 @@ namespace Example
                 s.Container.Register<HomeController>();
             });
 
+            Console.WriteLine("Hosting on {0}", http.Url);
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();
         }
