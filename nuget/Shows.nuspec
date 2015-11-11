@@ -2,18 +2,18 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Shows</id>
-    <version>1.0.0-beta1</version>
+    <version>1.0.0-beta2</version>
     <authors>Daniel Kerridge</authors>
-    <description>Self Hosted Opinionated Web Server</description>
+    <description>Shows allows you to quickly spin up a self hosted web server with out of the box support for hosting Web API controllers and static files. Shows uses Simple Injector for dependency injection and NLog for logging.</description>
     <language>en-US</language>
     <projectUrl>http://github.com/edjo23/shows</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <releaseNotes></releaseNotes>
     <dependencies>
 		  <dependency id="SimpleInjector" version="[3.1.0]" />
-		  <dependency id="NLog" version="[4.1.0]" />
 		  <dependency id="SimpleInjector.Integration.WebApi" version="[3.1.0]" />
-		  <dependency id="Common.Logging" version="[3.3.0]" />
+      <dependency id="NLog" version="[4.1.0]" />
+      <dependency id="Common.Logging" version="[3.3.0]" />
 		  <dependency id="Common.Logging.NLog41" version="[3.3.0]" />
 		  <dependency id="Microsoft.Owin.Hosting" version="[3.0.1]" />		
 		  <dependency id="Microsoft.Owin.Host.HttpListener" version="[3.0.1]" />		
@@ -24,5 +24,6 @@
   <files>
     <file src="..\bin\Release\Shows.dll" target="lib/net45-full" />
     <file src="app.config.install.xdt" target="content" />
+    <file src="Install.ps1" target="tools" />
   </files>
 </package>
